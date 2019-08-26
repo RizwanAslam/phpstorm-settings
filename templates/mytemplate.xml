@@ -1,0 +1,173 @@
+<templateSet group="mytemplate">
+  <template name="text" value="&lt;!-- $VALUE$ Form Text Input --&gt;&#10;&lt;div class=&quot;form-group&quot;&gt;&#10;    {!! Form::label('$NAME$','$VALUE$:') !!}&#10;    {!! Form::text('$NAME$',null,['class' =&gt; 'form-control','placeholder' =&gt; 'Enter $PLACEHOLDER$']) !!}&#10;&lt;/div&gt;" description="Create a Facade TextField" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="PLACEHOLDER" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="textarea" value="&lt;!-- $VALUE$ Form TextArea Input --&gt;&#10;&lt;div class=&quot;form-group&quot;&gt;&#10;    {!! Form::label('$NAME$','$VALUE$:') !!}&#10;    {!! Form::textarea('$NAME$',null,['class' =&gt; 'form-control','placeholder' =&gt; 'Enter $PLACEHOLDER$']) !!}&#10;&lt;/div&gt;" description="Create TextArea Fie;ld" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="PLACEHOLDER" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="password" value="&lt;!-- $VALUE$ Form Password Input --&gt;&#10;&lt;div class=&quot;form-group&quot;&gt;&#10;    {!! Form::label('$NAME$','$VALUE$:') !!}&#10;    {!! Form::password('$NAME$',null,['class' =&gt; 'form-control']) !!}&#10;&lt;/div&gt;" description="Facade Password Field" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="cform" value="&lt;!-- Create $NAME$ Form --&gt;&#10;{!! Form::open(['url' =&gt; '/$URL$' ]) !!}&#10;&#10;    $VALUE$&#10;&#10;&#10;&#10;&#10;{!! Form::close() !!}" description="Create Form Open Tag" toReformat="false" toShortenFQNames="true">
+    <variable name="URL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(URL)" defaultValue="" alwaysStopAt="false" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="uform" value="&lt;!-- Update $NAME$ Form --&gt;&#10;{!! Form::model($data,['url' =&gt; '/$URL$/'.$data-&gt;id,'method' =&gt; 'PUT' ]) !!}&#10;&#10;    $VALUE$&#10;&#10;&#10;&#10;&#10;{!! Form::close() !!}" description="Create Update Form" toReformat="false" toShortenFQNames="true">
+    <variable name="URL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(URL)" defaultValue="" alwaysStopAt="false" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="email" value="&lt;!-- $VALUE$ Form Email Input --&gt;&#10;&lt;div class=&quot;form-group&quot;&gt;&#10;    {!! Form::label('$NAME$','$VALUE$:') !!}&#10;    {!! Form::email('$NAME$',null,['class' =&gt; 'form-control','placeholder' =&gt; 'user@example.com']) !!}&#10;&lt;/div&gt;" description="Create Email Field" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="submit" value="&lt;!-- $VALUE$ Form Button --&gt;&#10;&lt;div class=&quot;form-group&quot;&gt;&#10;    {!! Form::submit('$NAME$',['class'=&gt;'form-control btn btn-primary']) !!}&#10;&lt;/div&gt;" description="Create Submit button" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="reset" value="&lt;!-- $VALUE$ Form Button --&gt;&#10;&lt;div class=&quot;form-group&quot;&gt;&#10;    {!! Form::reset('$NAME$',['class'=&gt;'form-control btn btn-danger']) !!}&#10;&lt;/div&gt;" description="Create Reset Button" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="fun" value="//---$FNAM$ Method---//&#10;public function $NAME$(){&#10;    $BODY$&#10;}" description="Create Complete Function" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FNAM" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if($NAME$){&#10;}" description="create If Conditional Body" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="else" value="else($NAME$){&#10;}" description="Create Else Body" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="angcont" value="(function(){&#10;    angular.module('laravel').controller('angController', function($scope){&#10;&#10;        $scope.data = 'User Data';&#10;&#10;    });&#10;&#10;})();" description="Angular Controller Template" toReformat="false" toShortenFQNames="true" />
+  <template name="angser" value="(function(){&#10;&#9;var myhttp = function($http){&#10;&#10;&#10;&#10;&#9;&#9;return {&#10;&#10;&#9;&#9;};&#10;&#9;};&#10;&#10;&#9;var module = angular.module(&quot;laravel&quot;);&#10;&#9;module.factory('myhttp', myhttp)&#10;})();" description="Angular Service Template" toReformat="false" toShortenFQNames="true" />
+  <template name="angapp" value="var laravel = angular.module('laravel', ['ngRoute', 'dndLists']);&#10;&#10;laravel.config(function($routeProvider) {&#10;&#10;    $routeProvider&#10;        .when('/', {&#10;            templateUrl : '/home',&#10;            controller: &quot;userController&quot;&#10;        })&#10;        .otherwise({redirectTo:&quot;/home&quot;});&#10;&#10;});" description="Define Angular App" toReformat="false" toShortenFQNames="true" />
+  <template name="ajax" value="$.ajax({&#10;   url: '/cart/delivery-type',&#10;   data: {'id': $id},&#10;   headers: { 'X-XSRF-TOKEN' : '{{\Illuminate\Support\Facades\Crypt::encrypt(csrf_token())}}' },&#10;   error: function() {&#10;&#10;   },&#10;   success: function(response) {&#10;      //console.log(response);&#10;   },&#10;   type: 'POST'&#10;});" description="Ajax Code For laravel" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="csrftoken" value="&lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;{{ csrf_token() }}&quot;&gt;" description="Laravel hidden csrftoken" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="sfun" value="//---$FNAM$ Method---//&#10;public static function $NAME$(){&#10;    $BODY$&#10;}" description="Static Function" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FNAM" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="aget" value="return $http.get('$URL$')&#10;        .then(function(response){&#10;    return response;&#10;});" description="Angular get" toReformat="false" toShortenFQNames="true">
+    <variable name="URL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ajaxsubmit" value="e.preventDefault();&#10;form = $(this);&#10;var action = form.attr('action');&#10;$.ajax({&#10;    url: action,&#10;    data: form.serialize(),&#10;    headers: { 'X-XSRF-TOKEN' : '{{\Illuminate\Support\Facades\Crypt::encrypt(csrf_token())}}' },&#10;    error: function() {&#10;    &#10;    },&#10;    success: function(response) {&#10;        console.log(response);&#10;    },&#10;    type: 'POST'&#10;});" description="Submit Form Using Ajax" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="try" value="try{&#10;    $Start$&#10;}catch (\Exception $e){&#10;    &#10;}" description="try catch black in php" toReformat="false" toShortenFQNames="true">
+    <variable name="Start" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="toFIxed" value="number_format((float)$NAME$, 2, '.', '')" description="Round Off float in php" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+    </context>
+  </template>
+  <template name="http" value="$http({&#10;    method: 'post',&#10;    url:  '$URL$',&#10;    data: {&#10;        data: $DATA$&#10;    }&#10;}).success(&#10;    function(response) {&#10;        console.log(response);&#10;    }&#10;);" description="Angular Http Request" toReformat="false" toShortenFQNames="true">
+    <variable name="URL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DATA" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="foreign" value="$table-&gt;integer('$TABLE$_id')-&gt;unsigned();&#10;$table-&gt;foreign('$TABLE$_id')-&gt;references('id')-&gt;on('$TABLE$s')-&gt;onDelete('cascade');" description="Foriegn Key Relation" toReformat="false" toShortenFQNames="true">
+    <variable name="TABLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="whereExists" value="whereExists(function ($query) {&#10;    $query-&gt;select(DB::raw(1))&#10;          -&gt;from('orders')&#10;          -&gt;whereRaw('orders.user_id = users.id');&#10;})" description="where wxist for eloquent" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ajaxSetup" value="$.ajaxSetup({&#10;    headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' }&#10;});" description="Laravel set XSRF Token" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="laravelImageUpload" value="/**&#10; * Check that the given file is a valid file instance.&#10; *&#10; * @param  mixed  $file&#10; * @return bool&#10; */&#10;protected static function isValidFile($file)&#10;{&#10;    return $file instanceof SplFileInfo &amp;&amp; $file-&gt;getPath() != '';&#10;}&#10;&#10;/**&#10; * @param $name&#10; * @param string $path&#10; * @return string&#10; */&#10;public static function saveImage($name, $path = 'uploads'){&#10;    if (static::isValidFile(request()-&gt;file($name))) {&#10;        $destinationPath = $path; // upload path&#10;        $extension = request()-&gt;file($name)-&gt;getClientOriginalExtension(); // getting image extension&#10;        $fileName = rand(11111,99999).'.'.$extension; // renameing image&#10;        request()-&gt;file($name)-&gt;move($destinationPath, $fileName); // uploading file to given path&#10;&#10;        return '/'.$destinationPath.'/'.$fileName;&#10;    }else{&#10;        return null;&#10;    }&#10;}" description="Laravel File Upload Function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="test" value="/** @test */&#10;public function $NAME$()&#10;{&#10;    $CODE$&#10;    $this-&gt;assertEquals('Test', 'Test');&#10;}" description="Php Unit Test Fun" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ajaxFile" value="var formData = new FormData(this);&#10;$.ajax({&#10;    type: &quot;POST&quot;,&#10;    cache: false,&#10;    processData: false,&#10;    contentType: false,&#10;    url: form.attr('action'),&#10;    data: formData,&#10;    beforeSend: function(){&#10;        &#10;    },&#10;    success: function(json){&#10;        &#10;    },&#10;    error : function(json){&#10;        &#10;    },&#10;    dataType: &quot;json&quot;&#10;});" description="Ajax Code For laravel to upload file in a form" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
