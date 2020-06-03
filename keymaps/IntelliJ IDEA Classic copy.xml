@@ -1,8 +1,13 @@
 <keymap version="1" name="IntelliJ IDEA Classic copy" parent="Mac OS X">
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="alt f12" />
+    <keyboard-shortcut first-keystroke="meta t" />
+  </action>
   <action id="FileChooser.NewFolder" />
   <action id="GotoChangedFile" />
   <action id="GotoClass" />
   <action id="SearchEverywhere">
     <keyboard-shortcut first-keystroke="meta n" />
   </action>
+  <action id="Vcs.UpdateProject" />
 </keymap>
