@@ -1,16 +1,5 @@
 <application>
-  <component name="MessDetector">
-    <phpmd_settings_migrated />
-  </component>
   <component name="PhpAutoImport" global_class_behavior="PREFER_IMPORT" />
-  <component name="PhpCodeSniffer">
-    <phpcs_settings_migrated />
-  </component>
-  <component name="PhpInterpreters">
-    <interpreters>
-      <interpreter id="b8141bc5-195c-48e4-a48a-7b1461fee0bf" name="PHP 7.1" home="/usr/local/bin/php" debugger_id="php.debugger.XDebug" />
-    </interpreters>
-  </component>
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
       <interpreter name="PHP 7.1">
