@@ -5,6 +5,7 @@
       <mapping pattern="npm" type="PLAIN_TEXT" />
       <mapping ext="eml" type="PLAIN_TEXT" />
       <mapping ext="swp" type="PLAIN_TEXT" />
+      <mapping ext="template" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
