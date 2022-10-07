@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="18">
     <extensionMap>
       <mapping ext="dev" type="AUTO_DETECTED" />
+      <mapping pattern=".dockerignore" type="GitIgnore file" />
       <mapping pattern="OK" type="PLAIN_TEXT" />
       <mapping pattern="npm" type="PLAIN_TEXT" />
       <mapping ext="eml" type="PLAIN_TEXT" />
